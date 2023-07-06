@@ -14,15 +14,12 @@ function GetAdvice() {
       .catch(error => console.error('Error:', error));
   }, []);
 
-
-
   return (
-    <div>
-      <h1>The More You Know</h1>
+    <div class="container">
       {advice ? (
-        <div class="flex">
-            <div>{id}</div>
-          <h2>{advice}</h2>
+        <div>
+            <div class="advice-id">Advice #{id}</div>
+          <h2 class="advice">{advice}</h2>
         </div>
       ) : (
         <p>Loading advice...</p>
